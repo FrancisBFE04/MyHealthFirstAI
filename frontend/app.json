@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "MyHealthFirstAI",
+    "slug": "myhealthfirstai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "scheme": "myhealthfirstai",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myhealthfirstai.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access to scan food and analyze workout form",
+        "NSMicrophoneUsageDescription": "We need microphone access for voice food logging",
+        "NSPhotoLibraryUsageDescription": "We need photo library access to select food images"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "com.myhealthfirstai.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      "expo-av",
+      "expo-image-picker"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
